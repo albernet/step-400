@@ -6,7 +6,7 @@ var applicationTitle = 'inside out - js';
 
 var applicationTagLine = 'continuously falling forward into the light...';
 
-window.addEventListener ('loud', initializeApplication);
+window.addEventListener ('load', initializeApplication);
 
 function initializeApplication(){
 	
@@ -27,14 +27,13 @@ function initializeApplication(){
 	elHeaderTitle.innerHTML = applicationTitle;
 	elHeader.appendChild(elHeaderTitle);
 	
-	var elHeaderTagline = document.createElement('h2');
-	elHeaderTagLine.textContent = applicationTagLine;
-	elHeader.appendChild(elHeaderTagLine);
+	var elHeaderTagLine = document.createElement('h2');
+    elHeaderTagLine.textContent = applicationTagLine;
+    elHeaderTagLine.style.fontSize = '.4em';
+    elHeader.appendChild(elHeaderTagLine);
 	
-	elHeaderTagLine.styles.fontSize = '.4em';
-	
-	var elHeaderTagline = document.createElement('main');
-	elMain.innerHTML = '<p>Hellow WOrld!</p>';
+	var elMain = document.createElement('main');
+	elMain.innerHTML = '<p>Hello World!</p>';
 	elWrapper.appendChild(elMain);
 	
 	var elFooter = document.createElement('footer');
@@ -42,9 +41,9 @@ function initializeApplication(){
 	elWrapper.appendChild(elFooter);
 	
 	elHeaderTitle.className = 'animated bounceInDown';
-	elHeaderTagLine.className = 'animated bounceInDown';
+	elHeaderTagLine.className = 'animated bounceInLeft';
 	elMain.className = 'animated bounceZoomIn';
-	
+	elFooter.className = 'animated bounceInRight';
 	
 	
 	
